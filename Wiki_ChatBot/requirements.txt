@@ -8,3 +8,4 @@ reportlab
 pyttsx3
 wikipedia-api
 openai==0.28
+tiktoken
