@@ -14,8 +14,7 @@ from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
 from reportlab.lib.styles import getSampleStyleSheet
 import pyttsx3
-
-
+import openai
 import wikipediaapi
 import urllib.parse
 import warnings
