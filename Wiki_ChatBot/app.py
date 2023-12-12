@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
@@ -8,7 +8,7 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 from reportlab.platypus import SimpleDocTemplate, Paragraph
 from reportlab.lib.styles import getSampleStyleSheet
-
+import toml
 from reportlab.lib.pagesizes import letter
 from reportlab.lib import colors
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
@@ -32,7 +32,8 @@ wiki_api = wikipediaapi.Wikipedia("Custom Wiki AI Chatbot", "en")
 
 
 def main():
-    load_dotenv()
+    #load_dotenv()
+    openai.api_key = st.secrets["OPENAI_API_KEY"]
     st.set_page_config(page_title="Wiki Chatbot")
     st.header("Wiki ChatBot 🌎")
     st.markdown(hide_default_format, unsafe_allow_html=True)
